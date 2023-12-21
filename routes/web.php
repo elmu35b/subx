@@ -28,6 +28,10 @@ use Vanilo\Foundation\Models\Product;
 // Routedom
 
 
+Route::get('/b', function () {
+    return 'First sub domain';
+})->domain('blog.' . 'musab.link' );
+
 Route::get('/', function () {
     return 'First sub domain';
-})->domain('blog.' . env('APP_URL'));
+});
